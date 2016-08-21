@@ -1,0 +1,83 @@
+/*
+Project Title: CSS Styles for NASA Photo of the Day Styles 
+Author: Christine Brown
+URI: www.chicagotechprojects.com 
+*/
+body {
+	background: #f4f4f4;
+	font-family:Arial, sans-serif;
+}
+h1,
+h2,
+section,
+input,
+form {
+	display: block;
+	margin:5px;
+}
+.container {
+	width:100%;
+	padding:20px;
+}
+.main {
+	float:right;
+	width:70%;
+	margin-left:0;
+	margin-right:0;
+	background:#333;
+	padding:5px;
+	color:#ffcc33;
+}
+.sidebar {
+	float:left;
+	width:20%;
+	margin-left:0;
+	margin-right:0;
+	background:#444;
+	color:#fbfbfb;
+	padding: 20px;
+}
+.clear-fix {
+	clear:all;
+}
+
+#photo img {
+	width:100%;
+	height:auto;
+}
+ul.photo li {
+	width: 40%;
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+
+}
+h3.title {
+	font-size:1.5em;
+	color:#fff;
+	display: inline-block;
+	vertical-align: top;
+	margin:20px;
+	
+}
+p.desc {
+	line-height: 1.5em;
+	display:inline-block;
+	vertical-align: top;
+	 margin-bottom:50px;
+
+}
+@media screen and (max-width:600px) {
+	ul.photo li {
+		width:80%;
+	}
+	h3.title {
+		display: block;
+		font-size: 1em;
+	}
+	p.desc {
+		display:block;
+		font-size:2em;
+		width:80%;
+	}
+}
