@@ -1,55 +1,41 @@
-<!doctype html>
-<html lang="en" ng-app="photoApp">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-		<title>NASA Photo Day by Christine Brown</title>
-		<link rel="stylesheet" href="style.css" />
-	</head>
-
-	<body>
-		<div class="container">
-			<header>
-				<h1>NASA Photo of the Day</h1>
-			</header>
-			<div class="main">
-					<div class="photo-container">
-						<div class="all-photos">		
-								<div id="photoDay">
-									<h2>Photos from the past 30 days</h2>
-									<ul id="photo" class="photo"></ul>
-								</div>							
-						</div>
-					</div>
-			</div>
-			<div class="clear-fix"></div>
-			<div class="sidebar">
-				<section id="user-profile" ng-controller="apodCtlr">
-					<h2 class="search-title">Photo Search<h2>
-						<p>{{message}}</p>
-				</section>
-				<section id="search-form">
-				<form>
-					<label for="search">Type Date in format provided
-					</lable>
-						<input type="search" id="search" name="photo-date" placeholder ="YYYY-MM-DD"required>
-						<input type = "submit" value="Search">
-				</form>
-				</section>
-				
-			</div>
-		</div>
-		<!--Scripts and JS libraries -->
-		<script src="assets/moment.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-		<!-- External scripts
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.0/lodash.min.js"></script>
-	-->
-<script src="assets/angular.min.js"></script>
-<script src="assets/app.js"></script>
-<script type="text/javascript" src="assets/scripts.js"></script>
-
-	</body>
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Daily Space Photos</title>
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body ng-app="apodApp" ng-controller="apodCtlr">
+    <header>
+      <h1>Enjoy Daily Views from Space</h1>
+    </header>
+    <div class="container">
+      <div class="main">
+        <div class="sidebar">
+          <section id="user-profile">
+            <h2 class="search-title">Photo Search</h2>
+            <p>{{message}}</p>
+          </section>
+          <section id="search-form">
+            <form>
+              <label for="search">Type Date in format provided</label>
+              <input type="search" id="search" name="photo-date" placeholder="YYYY-MM-DD" required>
+              <input type="submit" value="Search">
+            </form>
+          </section>
+        </div>
+        <div class="photo-container">
+          <div class="all-photos">
+            <div id="photoDay">
+              <h2>Photos from the past 30 days</h2>
+              <ul id="photo" class="photo"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2023 Made by CBC </p>
+    </footer>
+  </body>
 </html>
