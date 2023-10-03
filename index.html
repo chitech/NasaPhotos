@@ -3,31 +3,40 @@
   <head>
     <meta charset="UTF-8">
     <title>Daily Space Photos</title>
-    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<!--Boostrap-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<!--Fonts-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Raleway+Dots&family=Raleway:wght@200&display=swap" rel="stylesheet">
   </head>
   <body ng-app="apodApp" ng-controller="apodCtlr">
     <header>
-      <h1>Enjoy Daily Views from Space</h1>
+      <h1>Enjoy Daily Views from <span class="space">Space</span></h1>
     </header>
     <div class="container">
       <div class="main">
         <div class="sidebar">
+			<!--User search-->
           <section id="user-profile">
-            <h2 class="search-title">Photo Search</h2>
-            <p>{{message}}</p>
-          </section>
-          <section id="search-form">
+            <h2 class="search-title">Search</h2>
+            <p>Photos from the past 30 days</p>
+
+         <!--Search form -->
+          <div id="search-form" class="row">
             <form>
-              <label for="search">Type Date in format provided</label>
-              <input type="search" id="search" name="photo-date" placeholder="YYYY-MM-DD" required>
-              <input type="submit" value="Search">
+              <label for="search">Type Date </label>
+              <input class="form-control" type="search" id="search" name="photo-date" placeholder="YYYY-MM-DD" required>
+              <input type="submit" class="btn search-button" value="Search">
             </form>
-          </section>
+		</div>
         </div>
         <div class="photo-container">
           <div class="all-photos">
             <div id="photoDay">
-              <h2>Photos from the past 30 days</h2>
+              <h2>Results</h2>
               <ul id="photo" class="photo"></ul>
             </div>
           </div>

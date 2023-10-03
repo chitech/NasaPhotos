@@ -2,12 +2,21 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+	background-color:#192032;
+	color:#fbfbfb
+	font-family: 'Raleway', sans-serif;
   }
   
   header {
 	background-color: #333;
-	color: #fff;
-	padding: 20px;
+	color:#C0c0c0;
+	padding: 20px; 
+	font-family: 'Orbitron', sans-serif;
+  }
+  
+  .space {
+	color: white;
+	text-shadow: 2px 2px 4px #000000;
   }
   
   .container {
@@ -26,7 +35,8 @@ body {
 	flex: 1;
 	max-width: 300px;
 	padding: 20px;
-	background-color: #f2f2f2;
+	background-color: #c0c0c0;
+	color: #192032;
   }
   
   .photo-container {
@@ -60,7 +70,14 @@ body {
   #search-form {
 	margin-top: 20px;
   }
-  
+  .search-button {
+	background-color:#7846D1;
+	color:#fff;
+	border:0;
+	padding:10px 20px;
+	
+  }
+
   form {
 	display: flex;
 	flex-wrap: wrap;
